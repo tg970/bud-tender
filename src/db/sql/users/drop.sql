@@ -1,9 +1,7 @@
 /*
-    Inserts a new user record.
+    Drops the entire table Users.
 
     NOTE: We only add schema here to demonstrate the ability of class QueryFile
     to pre-format SQL with static formatting parameters when needs to be.
 */
-INSERT INTO ${schema~}.users(name)
-VALUES(${name})
-RETURNING *
+DROP TABLE ${schema~}.users

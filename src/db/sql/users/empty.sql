@@ -1,9 +1,8 @@
 /*
-    Inserts a new user record.
+    Quickly deletes all records from table Users
+    and all dependent records from table Products.
 
     NOTE: We only add schema here to demonstrate the ability of class QueryFile
     to pre-format SQL with static formatting parameters when needs to be.
 */
-INSERT INTO ${schema~}.users(name)
-VALUES(${name})
-RETURNING *
+TRUNCATE TABLE ${schema~}.users CASCADE
