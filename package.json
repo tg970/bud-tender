@@ -1,0 +1,19 @@
+{
+  "name": "bud-tender",
+  "version": "0.1.0",
+  "description": "Prototype Accounting and Plant Tracking System",
+  "main": "src/server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tg970/bud-tender.git"
+  },
+  "author": "Tyler Goodman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tg970/bud-tender/issues"
+  },
+  "homepage": "https://github.com/tg970/bud-tender#readme"
+}
