@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import "./app.css";
 import ReactImage from "./react.png";
-import List from "./components/List";
-import Form from "./components/Form";
 
 export default class App extends Component {
   constructor(props) {
@@ -32,38 +30,7 @@ export default class App extends Component {
           </h1>
         )}
         <img className="logo" src={ReactImage} alt="react" />
-        <div>
-          <h2>
-            Users
-          </h2>
-          <List />
-        </div>
-        <div>
-          <h2>
-            Add a new user
-          </h2>
-          <Form />
-        </div>
       </div>
     );
   }
 }
-
-// const App = () => (
-//   <div>
-//     <div>
-//       <h2>
-//         Users
-//       </h2>
-//       <List />
-//     </div>
-//     <div>
-//       <h2>
-//         Add a new user
-//       </h2>
-//       <Form />
-//     </div>
-//   </div>
-// );
-//
-// export default App;
