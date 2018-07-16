@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import ReactImage from "./react.png";
 import List from "./components/List";
 import Form from "./components/Form";
+import MenuAppBar from  "./components/AppBar";
 
 export default class App extends Component {
   constructor(props) {
@@ -23,6 +24,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
+        <MenuAppBar />
         <Button variant="contained" color="primary">
           Hello World
         </Button>
