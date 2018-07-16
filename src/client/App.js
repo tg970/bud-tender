@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./app.css";
+import Button from '@material-ui/core/Button';
 import ReactImage from "./react.png";
 import List from "./components/List";
 import Form from "./components/Form";
@@ -22,6 +23,9 @@ export default class App extends Component {
   render() {
     return (
       <div>
+        <Button variant="contained" color="primary">
+          Hello World
+        </Button>
         {this.state.greeting ? (
           <h1>
             {this.state.greeting}

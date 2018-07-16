@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/tg970/bud-tender#readme",
   "dependencies": {
+    "@material-ui/core": "^1.4.0",
+    "@material-ui/icons": "^1.1.0",
     "bluebird": "^3.5.1",
     "cors": "^2.8.4",
     "express": "^4.16.3",
