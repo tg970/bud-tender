@@ -50,6 +50,7 @@ export default class App extends Component {
           </h2>
           <Form />
         </div>
+        <a href="/about">About</a>
       </div>
     );
   }
