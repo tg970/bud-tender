@@ -13,7 +13,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"
@@ -24,10 +24,14 @@ module.exports = {
         use: ["style-loader", "css-loader"]
       },
       {
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        test: /\.(png|woff|woff2|eot|ttf|svg|jpg)$/,
         loader: "url-loader?limit=100000"
       }
     ]
+  },
+  resolve: {
+    modules: [path.resolve(__dirname, './src/client'), 'node_modules'],
+    extensions: ['.js', '.jsx', '.json']
   },
   devServer: {
     port: 3000,

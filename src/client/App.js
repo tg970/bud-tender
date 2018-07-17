@@ -5,6 +5,7 @@ import ReactImage from "./react.png";
 import List from "./components/List";
 import Form from "./components/Form";
 import MenuAppBar from  "./components/AppBar";
+import Footer from "./components/Footer/Footer";
 
 export default class App extends Component {
   constructor(props) {
@@ -51,6 +52,8 @@ export default class App extends Component {
           <Form />
         </div>
         <a href="/about">About</a>
+        <a href="/login">Login</a>
+        <Footer />
       </div>
     );
   }
