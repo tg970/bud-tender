@@ -2,6 +2,9 @@
   "name": "bud-tender",
   "version": "0.1.0",
   "description": "Prototype Accounting and Plant Tracking System",
+  "engines": {
+    "npm": "6.1.0"
+  },
   "main": "src/server/index.js",
   "scripts": {
     "start": "node src/server/index.js",
