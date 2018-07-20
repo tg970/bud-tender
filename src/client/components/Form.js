@@ -2,8 +2,11 @@
 
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import uuidv1 from "uuid";
+// import uuidv1 from "uuid";
 import { addUser } from "../store/actions/index";
+import API from "../Api";
+
+console.log(API);
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -24,6 +27,7 @@ class ConnectedForm extends Component {
     this.setState({ [event.target.id]: event.target.value });
   }
   postData(url = ``, data = {}) {
+    console.log(url);
     return fetch(url, {
         method: "POST",
         headers: {
@@ -37,7 +41,7 @@ class ConnectedForm extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const data = this.state;
-    this.postData('http://localhost:1122/users/add', data)
+    this.postData(`${API}/users/add`, data)
       .then((response) => {
         this.props.addUser(response);
       });
