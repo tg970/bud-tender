@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 import ReactImage from "./react.png";
 import List from "./components/List";
 import Form from "./components/Form";
-import MenuAppBar from  "./components/AppBar";
+import MenuAppBar from "./components/AppBar";
 import Footer from "./components/Footer/Footer";
 
 export default class App extends Component {
@@ -51,8 +51,13 @@ export default class App extends Component {
           </h2>
           <Form />
         </div>
-        <a href="/about">About</a>
-        <a href="/login">Login</a>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/components">Components</a></li>
+          <li><a href="/landing">Landing</a></li>
+          <li><a href="/profile">Profile</a></li>
+        </ul>
         <Footer />
       </div>
     );

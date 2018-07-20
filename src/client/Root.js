@@ -4,7 +4,10 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import App from './App';
 import About from './views/About';
-import LoginPage from './views/LoginPage/LoginPage'
+import LoginPage from './views/LoginPage/LoginPage';
+import Components from './views/Components/Components';
+import LandingPage from './views/LandingPage/LandingPage';
+import ProfilePage from './views/ProfilePage/ProfilePage';
 
 const indexRoutes = [
   { path: "/login", name: "LoginPage", component: LoginPage },
@@ -19,6 +22,9 @@ const Root = ({ store }) => (
         <Route exact path="/" component={App} />
         <Route path="/about" component={About} />
         <Route path="/login" component={LoginPage} />
+        <Route path="/components" component={Components} />
+        <Route path="/landing" component={LandingPage} />
+        <Route path="/profile" component={ProfilePage} />
       </Switch>
     </Router>
   </Provider>

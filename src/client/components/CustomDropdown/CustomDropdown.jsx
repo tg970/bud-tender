@@ -28,12 +28,15 @@ class CustomDropdown extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.handleClose = this.handleClose.bind(this);
   }
+
   handleClick() {
     this.setState({ open: true });
   }
+
   handleClose() {
     this.setState({ open: false });
   }
+
   render() {
     const { open } = this.state;
     const {
@@ -50,6 +53,8 @@ class CustomDropdown extends React.Component {
       rtlActive,
       noLiPadding
     } = this.props;
+    console.log('props:', this.props);
+    console.log('state:', this.state);
     const caretClasses = classNames({
       [classes.caret]: true,
       [classes.caretActive]: open,
