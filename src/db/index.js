@@ -6,6 +6,8 @@ const promise = require('bluebird');
 
 const repos = require('./repos'); // loading all repositories
 
+const URL = require('url-parse');
+
 // pg-promise initialization options:
 const initOptions = {
 
@@ -24,6 +26,10 @@ const initOptions = {
         // obj.products = new repos.Products(obj, pgp);
     }
 };
+
+const dbURL = new URL(process.env.DATABASE_URL);
+
+console.log('dburl:', dbURL);
 
 // Database connection parameters:
 const config = {
