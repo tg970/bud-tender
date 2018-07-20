@@ -1,5 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from "react";
+import { render } from "react-dom";
+import store from "./store/index";
+import Root from './Root';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+window.store = store;
+
+render(
+  <Root store={store} />,
+  document.getElementById("root")
+);

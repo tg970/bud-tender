@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import "./app.css";
+import Button from '@material-ui/core/Button';
 import ReactImage from "./react.png";
+import List from "./components/List";
+import Form from "./components/Form";
+import MenuAppBar from "./components/AppBar";
+import Footer from "./components/Footer/Footer";
 
 export default class App extends Component {
   constructor(props) {
@@ -20,6 +25,10 @@ export default class App extends Component {
   render() {
     return (
       <div>
+        <MenuAppBar />
+        <Button variant="contained" color="primary">
+          Hello World
+        </Button>
         {this.state.greeting ? (
           <h1>
             {this.state.greeting}
@@ -30,7 +39,46 @@ export default class App extends Component {
           </h1>
         )}
         <img className="logo" src={ReactImage} alt="react" />
+        <div>
+          <h2>
+            Users
+          </h2>
+          <List />
+        </div>
+        <div>
+          <h2>
+            Add a new user
+          </h2>
+          <Form />
+        </div>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/components">Components</a></li>
+          <li><a href="/landing">Landing</a></li>
+          <li><a href="/profile">Profile</a></li>
+        </ul>
+        <Footer />
       </div>
     );
   }
 }
+
+// const App = () => (
+//   <div>
+//     <div>
+//       <h2>
+//         Users
+//       </h2>
+//       <List />
+//     </div>
+//     <div>
+//       <h2>
+//         Add a new user
+//       </h2>
+//       <Form />
+//     </div>
+//   </div>
+// );
+//
+// export default App;
