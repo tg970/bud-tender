@@ -53,8 +53,6 @@ class CustomDropdown extends React.Component {
       rtlActive,
       noLiPadding
     } = this.props;
-    console.log('props:', this.props);
-    console.log('state:', this.state);
     const caretClasses = classNames({
       [classes.caret]: true,
       [classes.caretActive]: open,
@@ -66,8 +64,6 @@ class CustomDropdown extends React.Component {
       [classes.noLiPadding]: noLiPadding,
       [classes.dropdownItemRTL]: rtlActive
     });
-    console.log('caret:', caretClasses);
-    console.log('ddItem:', dropdownItem);
     return (
       <Manager>
         <Target>

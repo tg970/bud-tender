@@ -6,8 +6,6 @@ import { connect } from "react-redux";
 import { addUser } from "../store/actions/index";
 import API from "../Api";
 
-console.log(API);
-
 const mapDispatchToProps = (dispatch) => {
   return {
     addUser: user => dispatch(addUser(user))

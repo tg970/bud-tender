@@ -20,7 +20,6 @@ import headerLinksStyle from "assets/jss/material-kit-react/components/headerLin
 
 function HeaderLinks({ ...props }) {
   const { classes } = props;
-  console.log('header props:', props);
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
