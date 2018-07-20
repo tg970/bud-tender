@@ -9,6 +9,8 @@ import Components from './views/Components/Components';
 import LandingPage from './views/LandingPage/LandingPage';
 import ProfilePage from './views/ProfilePage/ProfilePage';
 
+import "./assets/scss/material-kit-react.css";
+
 const indexRoutes = [
   { path: "/login", name: "LoginPage", component: LoginPage },
   { path: "/about", name: "AboutPage", component: About },

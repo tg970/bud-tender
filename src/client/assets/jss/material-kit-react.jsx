@@ -180,7 +180,7 @@ const cardSubtitle = {
 };
 
 export {
-  //variables
+  // variables
   drawerWidth,
   transition,
   container,
