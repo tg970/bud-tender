@@ -66,6 +66,8 @@ class CustomDropdown extends React.Component {
       [classes.noLiPadding]: noLiPadding,
       [classes.dropdownItemRTL]: rtlActive
     });
+    console.log('caret:', caretClasses);
+    console.log('ddItem:', dropdownItem);
     return (
       <Manager>
         <Target>
