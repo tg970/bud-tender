@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import "./app.css";
-import Button from '@material-ui/core/Button';
+import Button from "./components/CustomButtons/Button.jsx";
 import ReactImage from "./react.png";
 import List from "./components/List";
 import Form from "./components/Form";
-import MenuAppBar from "./components/AppBar";
+import Header from "./components/Header/Header";
+import HeaderLinks from "./components/Header/HeaderLinks";
 import Footer from "./components/Footer/Footer";
 
 export default class App extends Component {
@@ -23,10 +24,21 @@ export default class App extends Component {
   }
 
   render() {
+    const { classes, ...rest } = this.props;
     return (
       <div>
-        <MenuAppBar />
-        <Button variant="contained" color="primary">
+        <Header
+          brand="Bud Tender"
+          rightLinks={<HeaderLinks />}
+          fixed
+          color="primary"
+          changeColorOnScroll={{
+            height: 400,
+            color: "white"
+          }}
+          {...rest}
+        />
+        <Button className="hello-btn" color="primary">
           Hello World
         </Button>
         {this.state.greeting ? (
