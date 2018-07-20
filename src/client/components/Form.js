@@ -7,7 +7,7 @@ import { addUser } from "../store/actions/index";
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addUser: article => dispatch(addUser(article))
+    addUser: user => dispatch(addUser(user))
   };
 };
 
@@ -15,7 +15,7 @@ class ConnectedForm extends Component {
   constructor() {
     super();
     this.state = {
-      title: ""
+      name: ""
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,24 +23,37 @@ class ConnectedForm extends Component {
   handleChange(event) {
     this.setState({ [event.target.id]: event.target.value });
   }
+  postData(url = ``, data = {}) {
+    return fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json; charset=utf-8"
+        },
+        body: JSON.stringify(data)
+    })
+    .then((response) => {return response.json()}) // parses response to JSON
+    .catch(error => console.error(`Fetch Error =\n`, error));
+  }
   handleSubmit(event) {
     event.preventDefault();
-    const { title } = this.state;
-    const id = uuidv1();
-    this.props.addUser({ title, id });
-    this.setState({ title: "" });
+    const data = this.state;
+    this.postData('http://localhost:1122/users/add', data)
+      .then((response) => {
+        this.props.addUser(response);
+      });
+    this.setState({ name: "" });
   }
   render() {
     const { title } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="form-group">
-          <label htmlFor="title">Title</label>
+          <label htmlFor="name">Name</label>
           <input
             type="text"
             className="form-control"
-            id="title"
-            value={title}
+            id="name"
+            value={this.state.name}
             onChange={this.handleChange}
           />
         </div>

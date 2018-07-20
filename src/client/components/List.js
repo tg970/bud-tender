@@ -11,7 +11,7 @@ const ConnectedList = ({ users }) => (
   <ul className="list-group list-group-flush">
     {users.map(el => (
       <li className="list-group-item" key={el.id}>
-        {el.title}
+        {el.name}
       </li>
     ))}
   </ul>
